@@ -5,9 +5,11 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="7"
+        android:minSdkVersion="8"
         android:targetSdkVersion="19" />
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -22,6 +24,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="il.ac.shenkar.todolist.CreateTaskActivity"
+            android:label="@string/title_activity_create_task" >
+        </activity>
+        <activity
+            android:name="il.ac.shenkar.todolist.LocationActivity"
+            android:label="@string/title_activity_location" >
+        </activity>
+        <receiver android:name="il.ac.shenkar.todolist.MyBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.shenkar.todolist"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

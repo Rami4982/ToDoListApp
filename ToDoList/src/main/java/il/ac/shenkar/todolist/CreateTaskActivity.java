@@ -49,7 +49,7 @@ public class CreateTaskActivity extends Activity
             public void onClick(View v)
             {
                 populateIt(v);
-                startActivity(new Intent(getApplicationContext(), LocationActivity.class));
+              //  startActivity(new Intent(getApplicationContext(), LocationActivity.class));
             }
         });
         Button createBtn = (Button) findViewById(R.id.create_Btn);

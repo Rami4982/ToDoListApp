@@ -28,7 +28,7 @@ public class TaskListActivity extends Activity
         setContentView(R.layout.main);
         final ListView listView = (ListView) findViewById(R.id.listV_main);
         Connect_DB connectorDB = Connect_DB.getInstance(this);
-        if ( connectorDB.getSize() == 0 )
+        if (connectorDB.getSize() == 0)
             connectorDB.populateItemsArr();
 
         listView.setAdapter(new ItemListBaseAdapter(this));
